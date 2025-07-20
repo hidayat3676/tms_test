@@ -43,5 +43,5 @@ updating, searching, and deleting translations with support for locales and tagg
 <p>When you run test case it refresh database so all persistent data will be loss.</p>
 
 ## Api's
-
-- for details about apis visit `api/documentation`
+- run `php artisan l5-swagger:generate` to generate api docs
+- then visit `api/documentation` for details about apis 
