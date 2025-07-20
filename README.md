@@ -30,6 +30,7 @@ updating, searching, and deleting translations with support for locales and tagg
 - cd `tms_test`
 - run `composer install`
 - cp `.env.example .env`
+- Add Database credentials to .env
 - run `php artisan key:generate` if key is not generated
 - run `php artisan migrate --seed`
 - Use credentials just seeded email: `test@example.com` password: `test12345`
