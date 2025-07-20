@@ -156,7 +156,7 @@ class TranslationController extends Controller
      *     @OA\Response(
      *         response=404,
      *         description="Not found"
-     *     )
+     *     ),
      *   @OA\Response(
      *         response=500,
      *         description="Server error"

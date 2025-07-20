@@ -32,7 +32,7 @@ class AuthController extends Controller
      *     @OA\Response(
      *         response=401,
      *         description="Invalid credentials"
-     *     )
+     *     ),
      *  @OA\Response(
      *         response=422,
      *         description="require params missing error"

@@ -2,7 +2,10 @@
 
 A lightweight, scalable API-based translation management service built using Laravel. It supports creating, retrieving,
 updating, searching, and deleting translations with support for locales and tagging.
-
+##Test Environment
+- Require `php 8.2 or higher`
+- based on laravel `12`
+- wan\'t work with sqlite is it does not support full text index which are used.
 ## Features
 
 - RESTful API for managing translations
