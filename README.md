@@ -23,9 +23,7 @@ updating, searching, and deleting translations with support for locales and tagg
 - Sanctum-authenticated endpoints
 
 - Fully Automated tests with Feature, Unit, and Performance Tests
-- Test login Cred:
-  - Email: test@example.com
-  - password: test12345
+
 
 ## Setup
 
