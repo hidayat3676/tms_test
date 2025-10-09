@@ -352,6 +352,7 @@
         "securitySchemes": {
             "sanctum": {
                 "type": "http",
+                "description": "Enter token in format: Bearer {token}",
                 "bearerFormat": "JWT",
                 "scheme": "bearer"
             }

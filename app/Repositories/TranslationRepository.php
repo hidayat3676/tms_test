@@ -3,16 +3,16 @@
 namespace App\Repositories;
 
 use App\Contracts\TranslationRepositoryInterface;
-use App\Models\Translation;
+use App\Factories\ModelFactory;
 
 class TranslationRepository implements TranslationRepositoryInterface
 {
 
     private $model;
 
-    public function __construct(Translation $model)
+    public function __construct($model)
     {
-        $this->model = get_class($model);
+        $this->model = ModelFactory::create($model);
     }
 
     public function create(array $data)

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Contracts\TranslationRepositoryInterface;
 use App\Contracts\TranslationServiceInterface;
+use App\Factories\ServiceFactory;
 use App\Http\Requests\TranslationRequest;
 use Illuminate\Http\Request;
 use OpenApi\Annotations as OA;
@@ -15,16 +16,17 @@ use OpenApi\Annotations as OA;
  *     securityScheme="sanctum",
  *     type="http",
  *     scheme="bearer",
- *     bearerFormat="JWT"
+ *     bearerFormat="JWT",
+ *     description="Enter token in format: Bearer {token}"
  * )
  */
 class TranslationController extends Controller
 {
     private $translationService;
 
-    public function __construct(TranslationServiceInterface $translationService)
+    public function __construct()
     {
-        $this->translationService = $translationService;
+        $this->translationService = ServiceFactory::create('translation');
     }
 
     /**

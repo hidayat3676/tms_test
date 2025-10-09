@@ -2,10 +2,7 @@
 
 namespace App\Providers;
 
-use App\Contracts\TranslationRepositoryInterface;
-use App\Contracts\TranslationServiceInterface;
-use App\Repositories\TranslationRepository;
-use App\Services\TranslationService;
+use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,8 +12,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(TranslationRepositoryInterface::class, TranslationRepository::class);
-        $this->app->bind(TranslationServiceInterface::class, TranslationService::class);
+        //
     }
 
     /**
@@ -24,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        ResetPassword::createUrlUsing(function (object $notifiable, string $token) {
+            return config('app.frontend_url')."/password-reset/$token?email={$notifiable->getEmailForPasswordReset()}";
+        });
     }
 }

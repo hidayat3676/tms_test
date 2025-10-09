@@ -14,7 +14,7 @@ updating, searching, and deleting translations with support for locales and tagg
 
 - Full CRUD support
 
-- Use Repository Pattern for CRUD and other database queries, for clean, will organize and maintainable code structure
+- Use SOLID design principle, for clean, will organize and maintainable code structure
 
 - Locale-based filtering
 
@@ -23,6 +23,9 @@ updating, searching, and deleting translations with support for locales and tagg
 - Sanctum-authenticated endpoints
 
 - Fully Automated tests with Feature, Unit, and Performance Tests
+- Test login Cred:
+  - Email: test@example.com
+  - password: test12345
 
 ## Setup
 
