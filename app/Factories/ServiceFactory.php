@@ -14,7 +14,7 @@ class ServiceFactory
             case 'translation':
                 return new TranslationService((new TranslationRepository('eloquent')));
             default:
-                throw new \Exception("Unknown notification type");
+                throw new \Exception("Unknown type");
         }
     }
 }

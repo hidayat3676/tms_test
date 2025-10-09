@@ -13,7 +13,7 @@ class ModelFactory
             case 'eloquent':
                 return new Translation();
             default:
-                throw new \Exception("Unknown notification type");
+                throw new \Exception("Unknown type");
         }
     }
 }
